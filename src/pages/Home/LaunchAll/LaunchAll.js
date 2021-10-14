@@ -4,10 +4,10 @@ import useLaunch from '../../../hooks/useLaunch';
 
 const LaunchAll = () => {
     const [launchAll, setLaunchAll] = useLaunch();
-    console.log(launchAll);
+
     return (
         <div>
-
+            <h1>This is from Launch</h1>
         </div>
     );
 };

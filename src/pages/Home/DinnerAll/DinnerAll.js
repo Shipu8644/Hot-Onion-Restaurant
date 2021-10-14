@@ -6,7 +6,7 @@ const DinnerAll = () => {
 
     return (
         <div>
-
+            <h1>take your dinner</h1>
         </div>
     );
 };
