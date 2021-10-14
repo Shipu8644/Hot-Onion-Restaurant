@@ -6,3 +6,31 @@
 .detail{
     margin-top: 150px;
 }
+.increDecreStyle{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    margin-top: 5em;
+}
+.icon{
+    margin-top: 20px;
+    border: 1px solid gray;
+    height: min-content;
+    padding:5px;
+    border-radius: 15px;
+}
+.fas{
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.btn-regular{
+    color: white;
+    background-color: red;
+    font-size: large;
+    padding: 10px 40px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 150px;
+}

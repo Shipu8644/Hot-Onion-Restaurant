@@ -10,6 +10,10 @@ const FoodHeader = () => {
     const [isLaunch, setIsLaunch] = useState(false);
     const [isDinner, setIsDinner] = useState(false);
 
+    const ActiveStyle = {
+        color: 'red',
+        borderBottom: '2px solid red'
+    }
 
     return (
         <div>
@@ -21,10 +25,7 @@ const FoodHeader = () => {
                 }} style={{ cursor: 'pointer' }} >
 
                     {!isBreakfast ? "Breakfast" :
-                        <span style={{
-                            color: 'red',
-                            borderBottom: '2px solid red'
-                        }} >Breakfast</span>
+                        <span style={ActiveStyle} >Breakfast</span>
                     }
                 </h4>
 
@@ -35,11 +36,8 @@ const FoodHeader = () => {
                     setIsDinner(false);
                 }}
                     className='f-head' >
-                    {!isLaunch ? "Launch" :
-                        <span style={{
-                            color: 'red',
-                            borderBottom: '2px solid red'
-                        }} >Launch</span>
+                    {!isLaunch ? "Lunch" :
+                        <span style={ActiveStyle} >Lunch</span>
                     }
                 </h4>
 
@@ -51,10 +49,7 @@ const FoodHeader = () => {
                     }}
                     className='f-head'>
                     {!isDinner ? "Dinner" :
-                        <span style={{
-                            color: 'red',
-                            borderBottom: '2px solid red'
-                        }} >Dinner</span>
+                        <span style={ActiveStyle} >Dinner</span>
                     }
                 </h4>
             </div>
