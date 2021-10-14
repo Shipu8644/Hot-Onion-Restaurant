@@ -10,6 +10,7 @@ const FoodHeader = () => {
     const [isLaunch, setIsLaunch] = useState(false);
     const [isDinner, setIsDinner] = useState(false);
 
+
     return (
         <div>
             <div className='food-header'>
@@ -17,7 +18,15 @@ const FoodHeader = () => {
                     setIsBreakFast(true);
                     setIsLaunch(false);
                     setIsDinner(false);
-                }} style={{ cursor: 'pointer' }} >Breakfast</h4>
+                }} style={{ cursor: 'pointer' }} >
+
+                    {!isBreakfast ? "Breakfast" :
+                        <span style={{
+                            color: 'red',
+                            borderBottom: '2px solid red'
+                        }} >Breakfast</span>
+                    }
+                </h4>
 
 
                 <h4 onClick={() => {
@@ -25,7 +34,14 @@ const FoodHeader = () => {
                     setIsLaunch(true);
                     setIsDinner(false);
                 }}
-                    className='f-head' >Launch</h4>
+                    className='f-head' >
+                    {!isLaunch ? "Launch" :
+                        <span style={{
+                            color: 'red',
+                            borderBottom: '2px solid red'
+                        }} >Launch</span>
+                    }
+                </h4>
 
                 <h4
                     onClick={() => {
@@ -33,7 +49,14 @@ const FoodHeader = () => {
                         setIsLaunch(false);
                         setIsDinner(true);
                     }}
-                    className='f-head'>Dinner</h4>
+                    className='f-head'>
+                    {!isDinner ? "Dinner" :
+                        <span style={{
+                            color: 'red',
+                            borderBottom: '2px solid red'
+                        }} >Dinner</span>
+                    }
+                </h4>
             </div>
 
             {isBreakfast &&
