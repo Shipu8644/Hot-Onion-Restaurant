@@ -4,6 +4,7 @@ import './App.css';
 import BreakFastDetail from './pages/FoodDetail/BreakFastDetail';
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
           <Route path='/breakfast-detail/:id'>
             <BreakFastDetail></BreakFastDetail>
           </Route>
-
+          <Route path='/place-order'>
+            <PlaceOrder></PlaceOrder>
+          </Route>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import useBreakfast from '../../hooks/useBreakfast';
 import './BreakFastDetail.css'
 const BreakFastDetail = () => {
@@ -40,7 +41,7 @@ const BreakFastDetail = () => {
                     </div>
 
                 </div>
-                <button className='btn-regular'>Add</button>
+                <NavLink to='/place-order'> <button className='btn-regular'>Add</button></NavLink>
             </div>
 
             <div>
