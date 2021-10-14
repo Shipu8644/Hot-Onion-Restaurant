@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Bagel and Cream cheese",
+        "price": "6.99",
+        "description": "Bread with edd and tomato.",
+        "img": "https://i.ibb.co/zVpCNkB/breakfast4.png"
+    },
+    {
+        "id": 2,
+        "name": "Breakfast Sandwich",
+        "price": "9.99",
+        "description": "Bread with egg and strawbery with orange.",
+        "img": "https://i.ibb.co/2tSX8cW/breakfast2.png"
+    },
+    {
+        "id": 3,
+        "name": "Baked Chicken",
+        "price": "10.99",
+        "description": "Yammy chicken with extra gravy sos.",
+        "img": "https://i.ibb.co/7pPGhRC/breakfast3.png"
+    },
+    {
+        "id": 4,
+        "name": "Full Breakast Fried Egg Toast Brunch",
+        "price": "3.99",
+        "description": "Toast with egg and banana.",
+        "img": "https://i.ibb.co/6RJXPZW/breakfast5.png"
+    },
+    {
+        "id": 5,
+        "name": "Toast Croissant Fried Egg",
+        "price": "19.99",
+        "description": "Toast with double egg with tomato.",
+        "img": "https://i.ibb.co/xz6xWWg/breakfast6.png"
+    },
+    {
+        "id": 6,
+        "name": "Eggs Benedict",
+        "price": "8.99",
+        "description": "Double egg with fried checken.",
+        "img": "https://i.ibb.co/TMPvfhK/breakfast1.png"
+    }
+]

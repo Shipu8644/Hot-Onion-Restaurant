@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Baked Chicken",
+        "price": "9.99",
+        "description": "Baked Chicken with nuduls and extra soses.",
+        "img": "https://i.ibb.co/VB30Yfs/dinner6.png"
+    },
+    {
+        "id": 2,
+        "name": "Lemony Salmon Piccata",
+        "price": "10.99",
+        "description": "Fish with some yammy potato.",
+        "img": "https://i.ibb.co/Cw6dKF5/dinner2.png"
+    },
+    {
+        "id": 3,
+        "name": "Garlic Butter Baked Salmon",
+        "price": "6.99",
+        "description": "Garlic butter with some extra salad and onion.",
+        "img": "https://i.ibb.co/s3S4b6g/dinner5.png"
+    },
+    {
+        "id": 4,
+        "name": "French fries with cheese",
+        "price": "8.99",
+        "description": "Yammy french fries with extra cheese and some garlic sos.",
+        "img": "https://i.ibb.co/TmpvHPP/dinner4.png"
+    },
+    {
+        "id": 5,
+        "name": "Pork Tenderloin With Quinoa Pilaf",
+        "price": "12.99",
+        "description": "Yammy chicken slice wit some vagetables.",
+        "img": "https://i.ibb.co/XDCn2LV/dinner3.png"
+    },
+    {
+        "id": 6,
+        "name": "Salmon With Grapefruit and Lentil Sala",
+        "price": "9.99",
+        "description": "Two small fish pices with some vagetables.",
+        "img": "https://i.ibb.co/pLyrwpL/dinner1.png"
+    }
+]

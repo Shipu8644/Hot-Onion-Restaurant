@@ -1,0 +1,10 @@
+.food-header{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.f-head{
+    margin-left: 30px;
+    cursor: pointer;
+}
