@@ -2,7 +2,9 @@
 .breakfast-container{
 display: grid;
 grid-template-columns: repeat(3,1fr);
-grid-gap: 40px;
-padding: 50px;
-
+grid-row-gap: 20px;
+grid-column-gap: 80px;
+padding: 40px;
+width: 80%;
+margin-left: 100px;
 }
