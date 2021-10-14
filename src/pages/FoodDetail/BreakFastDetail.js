@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
+
 import useBreakfast from '../../hooks/useBreakfast';
-import './BreakFastDetail.css'
+import './BreakFastDetail.css';
+import PlaceOrder from './PlaceOrder/PlaceOrder';
+
+
+
+
 const BreakFastDetail = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
@@ -25,6 +31,7 @@ const BreakFastDetail = () => {
     }
 
     return (
+
         <div className='detail-style'>
             <div className='detail'>
                 <h1 >{matchFood?.name}</h1>
@@ -32,12 +39,12 @@ const BreakFastDetail = () => {
                 <div className='increDecreStyle'>
                     <h2 style={{ marginRight: '20px', fontSize: '30px' }}>${matchFood?.price}</h2>
                     <div className='icon'>
-                        <span><i onClick={handleIncrease} class="fas fa-minus"></i></span>
+                        <span><i onClick={handleIncrease} className="fas fa-minus"></i></span>
                         <span style={{
                             fontSize: "25px", marginRight: '20px',
                             marginLeft: '20px'
                         }} >{count}</span>
-                        <span><i onClick={handleDecrease} class="fas fa-plus"></i></span>
+                        <span><i onClick={handleDecrease} className="fas fa-plus"></i></span>
                     </div>
 
                 </div>
@@ -47,7 +54,10 @@ const BreakFastDetail = () => {
             <div>
                 <img style={{ width: '550px', marginTop: '100px', marginRight: '200px' }} src={matchFood?.img} alt="" />
             </div>
+
         </div>
+
+
     );
 };
 

@@ -1,9 +1,12 @@
-import React from 'react';
+import BreakFast from "../../Home/Breakfast/BreakFast";
+
+
 
 const PlaceOrder = () => {
+
     return (
         <div>
-            <h1>Hey i am PlaceOrder</h1>
+            <h1>Place Order</h1>
         </div>
     );
 };

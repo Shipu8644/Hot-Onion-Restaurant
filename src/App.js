@@ -2,14 +2,17 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import BreakFastDetail from './pages/FoodDetail/BreakFastDetail';
+import PlaceOrder from './pages/FoodDetail/PlaceOrder/PlaceOrder';
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
+
+
 
 function App() {
 
   return (
     <div className="App">
+
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
@@ -21,7 +24,7 @@ function App() {
           <Route path='/breakfast-detail/:id'>
             <BreakFastDetail></BreakFastDetail>
           </Route>
-          <Route path='/place-order'>
+          <Route exact path='/place-order'>
             <PlaceOrder></PlaceOrder>
           </Route>
           <Route path='*'>
@@ -31,7 +34,9 @@ function App() {
 
         </Switch>
       </BrowserRouter>
+
     </div>
+
   );
 }
 
