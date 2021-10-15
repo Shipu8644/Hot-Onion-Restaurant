@@ -1,10 +1,10 @@
-import React, { createContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 import useBreakfast from '../../hooks/useBreakfast';
 import './BreakFastDetail.css';
-import PlaceOrder from './PlaceOrder/PlaceOrder';
+
 
 
 
@@ -29,6 +29,12 @@ const BreakFastDetail = () => {
     const handleDecrease = () => {
         setCount(count + 1);
     }
+    const history = useHistory();
+
+    const goPlaceorder = () => {
+        history.push('/place-order', { matchFood, count })
+    }
+
 
     return (
 
@@ -48,7 +54,7 @@ const BreakFastDetail = () => {
                     </div>
 
                 </div>
-                <NavLink to='/place-order'> <button className='btn-regular'>Add</button></NavLink>
+                <button onClick={goPlaceorder} className='btn-regular'>Add</button>
             </div>
 
             <div>
