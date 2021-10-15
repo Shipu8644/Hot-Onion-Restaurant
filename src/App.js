@@ -13,6 +13,7 @@ import Home from './pages/Home/Home/Home';
 import LaunchAll from './pages/Home/LaunchAll/LaunchAll';
 import NotFound from './pages/NotFound/NotFound';
 import Header from './pages/Shared/Header/Header';
+import MainHeader from './pages/Shared/Header/MainHeader';
 
 
 
@@ -22,7 +23,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-
+        <MainHeader></MainHeader>
         <Switch>
           <Route exact path='/'>
             <Header></Header>
