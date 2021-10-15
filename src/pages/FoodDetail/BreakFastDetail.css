@@ -26,11 +26,12 @@
 .btn-regular{
     color: white;
     background-color: red;
-    font-size: large;
+    font-size: 15px;
     padding: 10px 40px;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
     margin-top: 30px;
     margin-right: 150px;
+    
 }

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
 
 import BreakfastAll from '../BreakfastAll/BreakfastAll';
 import DinnerAll from '../DinnerAll/DinnerAll';
@@ -6,9 +8,11 @@ import LaunchAll from '../LaunchAll/LaunchAll';
 import './FoodHeader.css';
 
 const FoodHeader = () => {
+
     const [isBreakfast, setIsBreakFast] = useState(true);
     const [isLaunch, setIsLaunch] = useState(false);
     const [isDinner, setIsDinner] = useState(false);
+
 
     const ActiveStyle = {
         color: 'red',
@@ -18,7 +22,7 @@ const FoodHeader = () => {
     return (
         <div>
             <div className='food-header'>
-                <h4 onClick={() => {
+                <NavLink to='/breakfast-items' onClick={() => {
                     setIsBreakFast(true);
                     setIsLaunch(false);
                     setIsDinner(false);
@@ -27,10 +31,9 @@ const FoodHeader = () => {
                     {!isBreakfast ? "Breakfast" :
                         <span style={ActiveStyle} >Breakfast</span>
                     }
-                </h4>
+                </NavLink>
 
-
-                <h4 onClick={() => {
+                <NavLink to='/lunch-items' onClick={() => {
                     setIsBreakFast(false);
                     setIsLaunch(true);
                     setIsDinner(false);
@@ -39,9 +42,9 @@ const FoodHeader = () => {
                     {!isLaunch ? "Lunch" :
                         <span style={ActiveStyle} >Lunch</span>
                     }
-                </h4>
+                </NavLink>
 
-                <h4
+                <NavLink to='/dinner-items'
                     onClick={() => {
                         setIsBreakFast(false);
                         setIsLaunch(false);
@@ -51,7 +54,7 @@ const FoodHeader = () => {
                     {!isDinner ? "Dinner" :
                         <span style={ActiveStyle} >Dinner</span>
                     }
-                </h4>
+                </NavLink>
             </div>
 
             {isBreakfast &&
@@ -65,7 +68,7 @@ const FoodHeader = () => {
                 </div>}
 
             {isDinner &&
-                <div>
+                <div id="dinner">
                     <DinnerAll></DinnerAll>
                 </div>}
 

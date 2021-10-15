@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import useBreakfast from '../../hooks/useBreakfast';
 import './BreakFastDetail.css';
+import { HashLink } from 'react-router-hash-link';
 
 const BreakFastDetail = () => {
 
@@ -38,33 +39,43 @@ const BreakFastDetail = () => {
 
 
     return (
+        <>
+            <div className='detail-style'>
+                <div className='detail'>
+                    <h1 >{matchFood?.name}</h1>
+                    <p>{matchFood?.description}</p>
+                    <div className='increDecreStyle'>
+                        <h2 style={{ marginRight: '20px', fontSize: '30px' }}>${matchFood?.price}</h2>
+                        <div className='icon'>
+                            <span><i onClick={handleDecrease} className="fas fa-minus"></i></span>
+                            <span style={{
+                                fontSize: "25px", marginRight: '20px',
+                                marginLeft: '20px'
+                            }} >{count}</span>
+                            <span><i onClick={handleIncrease} className="fas fa-plus"></i></span>
+                        </div>
 
-        <div className='detail-style'>
-            <div className='detail'>
-                <h1 >{matchFood?.name}</h1>
-                <p>{matchFood?.description}</p>
-                <div className='increDecreStyle'>
-                    <h2 style={{ marginRight: '20px', fontSize: '30px' }}>${matchFood?.price}</h2>
-                    <div className='icon'>
-                        <span><i onClick={handleDecrease} className="fas fa-minus"></i></span>
-                        <span style={{
-                            fontSize: "25px", marginRight: '20px',
-                            marginLeft: '20px'
-                        }} >{count}</span>
-                        <span><i onClick={handleIncrease} className="fas fa-plus"></i></span>
                     </div>
-
+                    <button onClick={goPlaceorder} className='btn-regular'>
+                        <i className="fas fa-shopping-cart" style={{ marginRight: '10px' }}></i> Add</button>
                 </div>
-                <button onClick={goPlaceorder} className='btn-regular'>Add</button>
+
+                <div>
+                    <img style={{ width: '550px', marginTop: '100px', marginRight: '200px' }} src={matchFood?.img} alt="" />
+                </div>
+
             </div>
+            <NavLink to='/breakfast-items'>
+                <button className='btn-regular' style={{
+                    display: 'flex', justifyContent: 'center',
+                    width: '20%', marginBottom: "75px", float: "right",
+                    marginRight: '300px'
+                }}>Breakfast Items</button>
 
-            <div>
-                <img style={{ width: '550px', marginTop: '100px', marginRight: '200px' }} src={matchFood?.img} alt="" />
-            </div>
-
-        </div>
+            </NavLink>
 
 
+        </>
     );
 };
 
