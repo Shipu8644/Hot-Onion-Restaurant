@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useLocation, useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router';
+import useLaunch from '../../../hooks/useLaunch';
 
-import useBreakfast from '../../hooks/useBreakfast';
-import './BreakFastDetail.css';
-
-const BreakFastDetail = () => {
-
-
+const LunchDetail = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
 
-    const [breakfastAll, setBreakfastAll] = useBreakfast();
+    const [LunchAll, setLunchAll] = useLaunch();
 
     const [matchFood, setMatchFood] = useState({});
     let [count, setCount] = useState(0);
 
 
     useEffect(() => {
-        setMatchFood(breakfastAll.find(food => (food.id === idInt)));
+        setMatchFood(LunchAll.find(food => (food.id === idInt)));
 
-    }, [breakfastAll, idInt])
+    }, [LunchAll, idInt])
 
     const handleDecrease = () => {
         count < 1 ? setCount(0) :
@@ -35,10 +30,7 @@ const BreakFastDetail = () => {
     const goPlaceorder = () => {
         history.push('/place-order', { matchFood, count })
     }
-
-
     return (
-
         <div className='detail-style'>
             <div className='detail'>
                 <h1 >{matchFood?.name}</h1>
@@ -63,9 +55,7 @@ const BreakFastDetail = () => {
             </div>
 
         </div>
-
-
     );
 };
 
-export default BreakFastDetail;
+export default LunchDetail;

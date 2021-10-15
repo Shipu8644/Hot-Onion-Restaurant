@@ -5,19 +5,23 @@ import { useState } from "react/cjs/react.development";
 
 const PlaceOrder = () => {
     const location = useLocation();
-    const food = location.state.matchFood;
-    const itemNumber = location.state.count;
+    const food = location.state?.matchFood;
+    const itemNumber = location.state?.count;
 
-    const [item, setItem] = useState([food]);
+    const [item, setItem] = useState([]);
     let allitem = [];
+
     useEffect(() => {
-        allitem = [food];
-        setItem(...item, allitem);
+        allitem = [...item, food];
+        setItem(allitem);
 
         console.log(food, itemNumber);
+        console.log(allitem, item);
+    }, [food])
 
-        console.log(item);
-    }, [])
+
+    // console.log(item);
+
 
 
     return (

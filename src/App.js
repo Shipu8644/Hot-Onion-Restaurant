@@ -2,6 +2,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import BreakFastDetail from './pages/FoodDetail/BreakFastDetail';
+import LunchDetail from './pages/FoodDetail/PlaceOrder/LunchDetail';
 import PlaceOrder from './pages/FoodDetail/PlaceOrder/PlaceOrder';
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path='/breakfast-detail/:id'>
             <BreakFastDetail></BreakFastDetail>
+          </Route>
+          <Route path='/lunch-detail/:id'>
+            <LunchDetail></LunchDetail>
           </Route>
           <Route exact path='/place-order'>
             <PlaceOrder></PlaceOrder>
