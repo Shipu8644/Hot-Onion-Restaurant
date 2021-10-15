@@ -12,6 +12,7 @@ import FoodHeader from './pages/Home/FoodHeader/FoodHeader';
 import Home from './pages/Home/Home/Home';
 import LaunchAll from './pages/Home/LaunchAll/LaunchAll';
 import NotFound from './pages/NotFound/NotFound';
+import Header from './pages/Shared/Header/Header';
 
 
 
@@ -21,7 +22,8 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-        <FoodHeader> </FoodHeader>
+        <Header></Header>
+        <FoodHeader></FoodHeader>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
@@ -29,7 +31,6 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-
           <Route exact path='/breakfast-items'>
             <BreakfastAll></BreakfastAll>
           </Route>
@@ -39,7 +40,6 @@ function App() {
           <Route exact path='/dinner-items'>
             <DinnerAll></DinnerAll>
           </Route>
-
           <Route path='/breakfast-detail/:id'>
             <BreakFastDetail></BreakFastDetail>
           </Route>
