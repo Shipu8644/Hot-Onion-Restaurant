@@ -22,34 +22,44 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-        <Header></Header>
-        <FoodHeader></FoodHeader>
+
         <Switch>
           <Route exact path='/'>
+            <Header></Header>
+            <FoodHeader></FoodHeader>
             <Home></Home>
           </Route>
           <Route path='/home'>
+            <Header></Header>
+            <FoodHeader></FoodHeader>
             <Home></Home>
           </Route>
           <Route exact path='/breakfast-items'>
+            <FoodHeader></FoodHeader>
             <BreakfastAll></BreakfastAll>
           </Route>
           <Route exact path='/lunch-items'>
+            <FoodHeader></FoodHeader>
             <LaunchAll></LaunchAll>
           </Route>
           <Route exact path='/dinner-items'>
+            <FoodHeader></FoodHeader>
             <DinnerAll></DinnerAll>
           </Route>
           <Route path='/breakfast-detail/:id'>
+            <FoodHeader></FoodHeader>
             <BreakFastDetail></BreakFastDetail>
           </Route>
           <Route path='/lunch-detail/:id'>
+            <FoodHeader></FoodHeader>
             <LunchDetail></LunchDetail>
           </Route>
           <Route path='/dinner-detail/:id'>
+            <FoodHeader></FoodHeader>
             <DinnerDetail></DinnerDetail>
           </Route>
           <Route exact path='/place-order'>
+            <FoodHeader></FoodHeader>
             <PlaceOrder></PlaceOrder>
           </Route>
           <Route path='*'>

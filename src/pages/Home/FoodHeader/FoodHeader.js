@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import './FoodHeader.css';
 
 const FoodHeader = () => {
+
     const activeStyle = {
         color: 'red',
         borderBottom: '2px solid red',
@@ -26,6 +28,7 @@ const FoodHeader = () => {
                     <span >Dinner</span>
 
                 </NavLink>
+
             </div>
 
 

@@ -7,7 +7,7 @@ const DinnerAll = () => {
 
 
     return (
-        <div className='breakfast-container'>
+        <div id='dinner' className='breakfast-container'>
             {dinnerAll.map(dinner => <Dinner
                 key={dinner.id}
                 dinner={dinner}></Dinner>)}
