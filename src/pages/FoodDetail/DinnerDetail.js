@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
-import useLaunch from '../../../hooks/useLaunch';
+import useDinner from '../../hooks/useDinner';
 
-const LunchDetail = () => {
+const DinnerDetail = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
 
-    const [LunchAll, setLunchAll] = useLaunch();
+    const [dinnerAll, setDinnerAll] = useDinner();
 
     const [matchFood, setMatchFood] = useState({});
     let [count, setCount] = useState(0);
 
 
     useEffect(() => {
-        setMatchFood(LunchAll.find(food => (food.id === idInt)));
+        setMatchFood(dinnerAll.find(food => (food.id === idInt)));
 
-    }, [LunchAll, idInt])
+    }, [dinnerAll, idInt])
 
     const handleDecrease = () => {
         count < 1 ? setCount(0) :
@@ -58,4 +58,4 @@ const LunchDetail = () => {
     );
 };
 
-export default LunchDetail;
+export default DinnerDetail;
