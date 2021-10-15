@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
         <div>
-            <FoodHeader></FoodHeader>
+            {/* <FoodHeader></FoodHeader> */}
         </div>
     );
 };

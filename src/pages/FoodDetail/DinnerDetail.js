@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import useDinner from '../../hooks/useDinner';
-import { HashLink } from 'react-router-hash-link';
+
 import { NavLink } from 'react-router-dom';
 const DinnerDetail = () => {
     const { id } = useParams();

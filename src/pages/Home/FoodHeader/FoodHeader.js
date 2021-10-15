@@ -1,27 +1,55 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-
-import BreakfastAll from '../BreakfastAll/BreakfastAll';
-import DinnerAll from '../DinnerAll/DinnerAll';
-import LaunchAll from '../LaunchAll/LaunchAll';
 import './FoodHeader.css';
 
 const FoodHeader = () => {
-
-    const [isBreakfast, setIsBreakFast] = useState(true);
-    const [isLaunch, setIsLaunch] = useState(false);
-    const [isDinner, setIsDinner] = useState(false);
-
-
-    const ActiveStyle = {
+    const activeStyle = {
         color: 'red',
-        borderBottom: '2px solid red'
+        borderBottom: '2px solid red',
     }
 
     return (
         <div>
             <div className='food-header'>
+                <NavLink activeStyle={activeStyle} style={{ textDecoration: 'none' }} to='/breakfast-items' >
+                    <span >Breakfast</span>
+                </NavLink>
+
+                <NavLink activeStyle={activeStyle} style={{ textDecoration: 'none' }} to='/lunch-items'
+                    className='f-head' >
+                    <span  >Lunch</span>
+                </NavLink>
+
+                <NavLink activeStyle={activeStyle} style={{ textDecoration: 'none' }} to='/dinner-items'
+                    className='f-head'>
+                    <span >Dinner</span>
+
+                </NavLink>
+            </div>
+
+
+
+
+        </div>
+    );
+};
+
+export default FoodHeader;
+
+// Previous Part:
+
+// const [isBreakfast, setIsBreakFast] = useState(true);
+//     const [isLaunch, setIsLaunch] = useState(false);
+//     const [isDinner, setIsDinner] = useState(false);
+
+
+//     const ActiveStyle = {
+//         color: 'red',
+//         borderBottom: '2px solid red'
+//     }
+
+{/* <div className='food-header'>
                 <NavLink to='/breakfast-items' onClick={() => {
                     setIsBreakFast(true);
                     setIsLaunch(false);
@@ -73,8 +101,4 @@ const FoodHeader = () => {
                 </div>}
 
 
-        </div>
-    );
-};
-
-export default FoodHeader;
+        </div> */}

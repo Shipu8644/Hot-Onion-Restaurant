@@ -21,6 +21,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
+        <FoodHeader> </FoodHeader>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
@@ -54,8 +55,6 @@ function App() {
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
-
-
         </Switch>
       </BrowserRouter>
 

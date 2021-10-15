@@ -1,7 +1,7 @@
 .detail-style{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    
+    margin-top: 0px;
 }
 .detail{
     margin-top: 150px;
