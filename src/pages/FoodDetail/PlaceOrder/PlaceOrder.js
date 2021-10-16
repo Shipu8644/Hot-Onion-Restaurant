@@ -32,7 +32,7 @@ const PlaceOrder = () => {
             <h4>{food?.price}</h4>
 
             <NavLink to='/home'>
-                <button>Back To Home page</button>
+                <button className='btn-regular'>Back To Home page</button>
             </NavLink>
 
         </div>

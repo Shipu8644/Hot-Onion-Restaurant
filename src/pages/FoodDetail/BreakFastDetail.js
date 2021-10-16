@@ -45,7 +45,7 @@ const BreakFastDetail = () => {
                     <h1 >{matchFood?.name}</h1>
                     <p>{matchFood?.description}</p>
                     <div className='increDecreStyle'>
-                        <h2 style={{ marginRight: '20px', fontSize: '30px' }}>${matchFood?.price}</h2>
+                        <h2 style={{ marginRight: '20px', fontSize: '30px', marginTop: '10px' }}>${matchFood?.price}</h2>
                         <div className='icon'>
                             <span><i onClick={handleDecrease} className="fas fa-minus"></i></span>
                             <span style={{

@@ -11,7 +11,10 @@ import DinnerAll from './pages/Home/DinnerAll/DinnerAll';
 import FoodHeader from './pages/Home/FoodHeader/FoodHeader';
 import Home from './pages/Home/Home/Home';
 import LaunchAll from './pages/Home/LaunchAll/LaunchAll';
+import Login from './pages/Login/Login/Login';
+
 import NotFound from './pages/NotFound/NotFound';
+import Register from './pages/Register/Register/Register';
 import Header from './pages/Shared/Header/Header';
 import MainHeader from './pages/Shared/Header/MainHeader';
 
@@ -63,8 +66,11 @@ function App() {
             <FoodHeader></FoodHeader>
             <PlaceOrder></PlaceOrder>
           </Route>
-          <Route path='*'>
-            <NotFound></NotFound>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='/registration'>
+            <Register></Register>
           </Route>
         </Switch>
       </BrowserRouter>

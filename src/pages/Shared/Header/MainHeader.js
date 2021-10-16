@@ -18,12 +18,12 @@ const MainHeader = () => {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='*' className="nav-link" >
+                        <NavLink to='/login' className="nav-link" >
                             Login
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='*' className="nav-link" >
+                        <NavLink to='/registration' className="nav-link" >
                             Registration
                         </NavLink>
                     </li>
