@@ -6,7 +6,7 @@ const Header = () => {
             <h1 className="header-title">Best Food is waiting For your belly</h1>
             <div className='search'>
                 <input className="input" type="text" />
-                <button style={{ marginBottom: '30px' }} className='btn-regular'>Search</button>
+                <button style={{ marginBottom: '40px' }} className='btn-regular'>Search</button>
             </div>
 
 
