@@ -9,11 +9,11 @@ const useFirebase = () => {
     const auth = getAuth();
 
     const signInGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
+            // .then(result => {
+            //     console.log(result.user);
+            //     setUser(result.user);
+            // })
             .catch(error => {
                 console.log(error.message);
             })

@@ -74,6 +74,10 @@ function App() {
             <Route path='/registration'>
               <Register></Register>
             </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
+
           </Switch>
         </BrowserRouter>
       </AuthProvider>
